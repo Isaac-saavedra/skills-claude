@@ -5,6 +5,9 @@ description: "Diseña, crea, valida y mejora Skills reutilizables para Claude si
 
 # Skill Creator
 
+## Alcance
+**No cubre:** Solo el contenido de esta biblioteca: el formato y límites se comprueban en la documentación oficial vigente.
+
 ## Objetivo
 Crear Skills enfocadas, detectables y verificables. Una Skill debe enseñar un flujo de trabajo repetible, no ser una colección vaga de consejos.
 
@@ -36,3 +39,12 @@ No uses nombres reservados ni XML en los metadatos.
 
 ## Entrega
 Incluye carpeta, SKILL.md, referencias/plantillas necesarias, ejemplos de activación y resultado de validación. No afirmes compatibilidad universal sin probar los entornos objetivo.
+
+## Verificación
+Ejecuta `python3 scripts/validate_skills.py` y, en Claude Code 2.1.233 o posterior, `claude plugin validate .claude/skills`. Prueba la activación con `python3 scripts/test_triggers.py`.
+
+## Ejemplo
+Descripción: "Audita dependencias con npm audit y pip-audit. Usar con paquetes vulnerables u obsoletos". Tercera persona, qué hace y cuándo usarla, con lo clave al principio porque el listado puede recortarla.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

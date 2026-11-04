@@ -1,9 +1,12 @@
 ---
 name: software-architecture
-description: "Diseña y evalúa arquitecturas de software, límites de módulos, patrones, decisiones técnicas y diagramas. Úsala al iniciar un sistema, dividir un monolito, evaluar escalabilidad o documentar decisiones de arquitectura."
+description: "Diseña y evalúa arquitecturas: límites de módulos, estilos, compromisos y requisitos no funcionales. Usar siempre al elegir entre monolito y servicios, iniciar un sistema o evaluar escalabilidad."
 ---
 
 # Software Architecture
+
+## Alcance
+**No cubre:** Documentar lo existente: `architecture-documentation`. Función concreta: `technical-specification`. Ejecución de microservicios: `microservices-engineering`. Patrones de clases: `design-patterns`.
 
 ## Objetivo
 Diseñar soluciones comprensibles, seguras, mantenibles y proporcionales a los requisitos. No elijas microservicios, colas, cachés ni patrones complejos por moda.
@@ -39,3 +42,12 @@ Diseñar soluciones comprensibles, seguras, mantenibles y proporcionales a los r
 
 ## Criterio de finalización
 La propuesta debe poder ser revisada por otro desarrollador y explicar qué se construye, por qué, qué queda fuera, cuáles son los riesgos y cómo se comprobará.
+
+## Verificación
+Comprueba cada requisito no funcional con un método: prueba, métrica o análisis. Marca como hipótesis lo no validado y revisa la propuesta con quien la operará.
+
+## Ejemplo
+Aplicación de 5 personas y poca carga: monolito modular con PostgreSQL como opción simple; microservicios descartados por coste operativo. Decisión registrada en un ADR, con criterios para reevaluarla.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

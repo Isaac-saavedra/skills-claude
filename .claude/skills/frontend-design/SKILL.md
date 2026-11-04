@@ -1,9 +1,12 @@
 ---
 name: frontend-design
-description: "Diseña e implementa interfaces web modernas, accesibles y responsive con componentes reutilizables. Úsala para crear páginas, dashboards, formularios, prototipos o mejorar la experiencia visual de una aplicación."
+description: "Diseña e implementa interfaces web modernas y responsive con componentes reutilizables. Usar siempre al crear o rediseñar páginas, dashboards, formularios o prototipos."
 ---
 
 # Frontend Design
+
+## Alcance
+**No cubre:** Lógica de componentes React: `react-development`. Evaluación de usabilidad: `ui-ux-engineering`. Auditoría WCAG: `web-accessibility`.
 
 ## Objetivo
 Crear interfaces originales, claras, consistentes, accesibles y útiles. La estética debe apoyar la tarea del usuario y no ocultar problemas funcionales.
@@ -33,3 +36,12 @@ Crear interfaces originales, claras, consistentes, accesibles y útiles. La est�
 
 ## Entrega
 Describe decisiones de UX, componentes creados, responsive, accesibilidad, pruebas realizadas y cualquier dependencia añadida. No afirmes cumplimiento total de WCAG sin una auditoría suficiente.
+
+## Verificación
+Revisa en navegador, a ancho móvil y de escritorio, los estados de carga, vacío, error y éxito. Comprueba teclado, foco visible y contraste (4,5:1 en texto normal).
+
+## Ejemplo
+Panel de ventas: jerarquía con tres indicadores clave, gráfico con unidades y periodo, tabla en una columna en móvil, y datos de ejemplo identificados como tales.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

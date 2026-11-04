@@ -1,9 +1,12 @@
 ---
 name: devops-engineering
-description: "Automatiza construcción, integración, entrega, despliegue, contenedores e infraestructura como código. Úsala para Docker, CI/CD, GitHub Actions, Linux, observabilidad y operaciones."
+description: "Coordina la entrega y operación de un proyecto de extremo a extremo cuando abarca varias áreas: build, entornos, despliegue y operación. Usar para el panorama DevOps general."
 ---
 
 # DevOps Engineering
+
+## Alcance
+**No cubre:** Para una sola tecnología, prefiere la Skill específica: `docker-engineering`, `kubernetes-engineering`, `terraform-iac`, `cicd-engineering`, `linux-server-engineering`, `observability-engineering`.
 
 ## Procedimiento
 1. Inspecciona sistema operativo, runtime, herramientas, pipeline y entorno.
@@ -27,3 +30,12 @@ description: "Automatiza construcción, integración, entrega, despliegue, conte
 
 ## Entrega
 Incluye pipeline, archivos modificados, instrucciones de ejecución, secretos requeridos (solo nombres), pruebas, estrategia de despliegue y rollback.
+
+## Verificación
+Ejecuta el flujo completo en un entorno no productivo: build, pruebas, despliegue, comprobación de salud y reversión. Registra resultados reales.
+
+## Ejemplo
+Proyecto desplegado a mano: identificar pasos actuales, automatizar compilación y pruebas, promover el mismo artefacto entre entornos, añadir comprobación de salud y reversión, y documentar el proceso.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

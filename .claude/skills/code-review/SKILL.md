@@ -1,9 +1,12 @@
 ---
 name: code-review
-description: "Realiza revisiones de código enfocadas en defectos, seguridad, regresiones, mantenibilidad y rendimiento. Úsala para revisar cambios, pull requests, diffs o módulos antes de integrarlos."
+description: "Revisa código buscando defectos, seguridad, regresiones, mantenibilidad y rendimiento. Usar siempre que se pida revisar un pull request, diff o cambio antes de fusionarlo."
 ---
 
 # Code Review
+
+## Alcance
+**No cubre:** Configurar linters y estándares: `code-quality`. Auditoría de seguridad completa: `application-security`.
 
 ## Objetivo
 Encontrar problemas concretos y accionables. No conviertas preferencias de estilo en defectos.
@@ -34,3 +37,12 @@ Encontrar problemas concretos y accionables. No conviertas preferencias de estil
 
 ## Resumen
 Incluye alcance revisado, hallazgos ordenados, pruebas ejecutadas y limitaciones de la revisión.
+
+## Verificación
+Cada hallazgo confirmado cita archivo, línea y un escenario concreto. Si una prueba se ejecutó, incluye el comando y resultado.
+
+## Ejemplo
+**Alta**. `pagos.py:88`. El reintento repite el cobro porque falta clave de idempotencia. Escenario: timeout tras cobrar → segundo cobro. Corrección: enviar la clave y añadir una prueba.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

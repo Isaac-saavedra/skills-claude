@@ -1,12 +1,14 @@
 ---
 name: application-security
-description: "Evalúa y mejora la seguridad de aplicaciones, código, APIs y configuraciones siguiendo prácticas OWASP y mínimo privilegio. Úsala para threat modeling, revisión de vulnerabilidades o hardening defensivo."
+description: "Audita la seguridad de aplicaciones, código, APIs y configuraciones existentes con prácticas OWASP. Usar para revisar vulnerabilidades o aplicar hardening defensivo."
 ---
 
 # Application Security
 
 ## Alcance
 Trabaja únicamente sobre sistemas propios o para los que el usuario tenga autorización. Mantén el análisis en un propósito defensivo.
+
+**No cubre:** Escribir código seguro desde el inicio: `secure-code-development`. Modelar amenazas de un diseño: `threat-modeling`. Pruebas activas autorizadas: `penetration-testing`.
 
 ## Procedimiento
 1. Define activos, datos sensibles, actores, límites de confianza y superficie expuesta.
@@ -27,3 +29,12 @@ Trabaja únicamente sobre sistemas propios o para los que el usuario tenga autor
 
 ## Entregable
 Resumen ejecutivo, alcance, metodología, hallazgos con evidencia, severidad razonada, remediación, validación y limitaciones.
+
+## Verificación
+Cada hallazgo incluye evidencia y comprobación no destructiva. Valida a mano los resultados de SAST; prioriza lo que las herramientas analizan mal, como lógica de negocio, autorización y condiciones de carrera.
+
+## Ejemplo
+Hallazgo confirmado: `GET /facturas/{id}` no comprueba el propietario (`facturas.py:42`). Severidad alta. Corrección: filtrar por usuario autenticado y añadir prueba de regresión con dos cuentas.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

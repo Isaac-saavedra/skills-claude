@@ -1,9 +1,12 @@
 ---
 name: debugging
-description: "Diagnostica errores de software mediante síntomas, logs, trazas, reproducción y análisis de causa raíz. Úsala cuando una aplicación falle, presente resultados inesperados o tenga errores intermitentes."
+description: "Diagnostica errores mediante síntomas, logs, trazas, reproducción y causa raíz. Usar siempre ante excepciones, stack traces, fallos intermitentes o resultados inesperados, antes de proponer una corrección."
 ---
 
 # Debugging
+
+## Alcance
+**No cubre:** Incidente activo con impacto en usuarios: `incident-response`. Lentitud sin error: `performance-optimization`.
 
 ## Principio
 No adivines la causa. Construye y verifica hipótesis con evidencia.
@@ -29,3 +32,12 @@ No adivines la causa. Construye y verifica hipótesis con evidencia.
 
 ## Informe
 Incluye síntoma, impacto, evidencia, hipótesis descartadas, causa confirmada o estado no concluyente, solución, validación y acciones preventivas.
+
+## Verificación
+El fallo se reproduce antes de la corrección y no después. Añade una prueba de regresión y confirma con el mismo procedimiento.
+
+## Ejemplo
+Error intermitente: los registros coinciden con una rotación de conexiones. Hipótesis: el pool reutiliza conexiones cerradas. Prueba: reproducir con `max_lifetime` bajo. Resultado confirmado; corrección y prueba de regresión.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

@@ -1,9 +1,12 @@
 ---
 name: backend-engineering
-description: "Desarrolla servicios backend robustos, mantenibles y seguros, incluyendo lógica de negocio, autenticación, autorización, colas y procesos asíncronos. Úsala al crear o modificar servicios del lado servidor."
+description: "Desarrolla servicios del lado servidor: lógica de negocio, capas, transacciones, errores y procesos asíncronos. Usar siempre al implementar o modificar lógica de servidor."
 ---
 
 # Backend Engineering
+
+## Alcance
+**No cubre:** Contrato HTTP: `api-engineering`. Runtime Node: `nodejs-engineering`. Python: `python-engineering`. Esquemas: `database-engineering`. Colas: `message-queue-engineering`.
 
 ## Procedimiento
 1. Inspecciona runtime, framework, estructura, configuración, dependencias y pruebas existentes.
@@ -27,3 +30,10 @@ description: "Desarrolla servicios backend robustos, mantenibles y seguros, incl
 
 ## Verificación
 Ejecuta pruebas y análisis disponibles. Informa exactamente qué se ejecutó, qué pasó, qué falló y qué no se pudo verificar.
+Ejecuta pruebas unitarias y de integración, incluidos fallos de dependencias, permisos y transacción interrumpida.
+
+## Ejemplo
+Transferencia de saldo: una sola transacción, restricción `saldo >= 0` en la base de datos, clave de idempotencia y prueba con dos solicitudes simultáneas.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

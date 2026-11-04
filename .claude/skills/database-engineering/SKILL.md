@@ -1,9 +1,12 @@
 ---
 name: database-engineering
-description: "Diseña, consulta, migra y optimiza bases de datos relacionales y NoSQL. Úsala al modelar esquemas, escribir SQL, revisar índices, planificar migraciones o diagnosticar problemas de persistencia."
+description: "Modela, consulta y optimiza bases de datos: esquemas, SQL, índices, migraciones de esquema y planes de ejecución. Usar siempre con consultas lentas, EXPLAIN o diseño de tablas."
 ---
 
 # Database Engineering
+
+## Alcance
+**No cubre:** Traslado entre motores o sistemas: `migration-engineering`. Pipelines: `data-engineering`.
 
 ## Análisis inicial
 1. Identifica motor, versión, esquema, volumen conocido, patrones de acceso y criticidad.
@@ -34,3 +37,12 @@ description: "Diseña, consulta, migra y optimiza bases de datos relacionales y 
 
 ## Entrega
 Incluye diagrama o descripción del modelo, DDL/migración, índices justificados, consultas de validación y riesgos operativos.
+
+## Verificación
+Compara el plan de ejecución antes y después, en datos representativos. Prueba migraciones de ida y vuelta fuera de producción. En PostgreSQL, tras `CREATE INDEX CONCURRENTLY` comprueba que el índice no quedó `INVALID`.
+
+## Ejemplo
+Índice en tabla activa de PostgreSQL: `CREATE INDEX CONCURRENTLY` no bloquea escrituras, pero tarda más y no corre dentro de una transacción. Si falla, elimina el índice inválido y repite.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

@@ -5,6 +5,9 @@ description: "Investiga y optimiza rendimiento de aplicaciones, APIs, consultas 
 
 # Performance Optimization
 
+## Alcance
+**No cubre:** Bloqueos del event loop en Node: `nodejs-engineering`. Objetivos de fiabilidad: `reliability-engineering`. Telemetría nueva: `observability-engineering`.
+
 ## Regla principal
 Mide antes de optimizar. No declares una mejora sin una comparación válida.
 
@@ -34,3 +37,12 @@ Mide antes de optimizar. No declares una mejora sin una comparación válida.
 
 ## Informe
 Incluye línea base, metodología, cuello de botella, cambio, resultados medidos, entorno, limitaciones y recomendación.
+
+## Verificación
+Compara la misma métrica antes y después con igual carga y entorno. En web, Core Web Vitals se evalúa en el percentil 75: LCP ≤ 2,5 s, INP ≤ 200 ms y CLS ≤ 0,1.
+
+## Ejemplo
+Listado lento: línea base p95 de 2,4 s; el perfil muestra consultas N+1. Tras la corrección, se mide de nuevo con la misma carga y se informa la cifra real.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

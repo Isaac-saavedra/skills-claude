@@ -5,6 +5,9 @@ description: "Diseña, implementa y revisa soluciones AWS con foco en arquitectu
 
 # AWS Cloud Engineering
 
+## Alcance
+**No cubre:** Código Terraform: `terraform-iac`. Kubernetes: `kubernetes-engineering`. Otros proveedores de nube.
+
 ## Reglas de verificación
 AWS cambia con frecuencia. Verifica nombres, límites, regiones, precios, disponibilidad y comportamiento en documentación oficial AWS antes de afirmarlos. No inventes ARN, cuotas ni capacidades.
 
@@ -31,3 +34,12 @@ No ejecutes ni recomiendes aplicar cambios destructivos sin aprobación. Identif
 
 ## Entrega
 Incluye región, servicios, diagrama, configuración/IaC, permisos, costos conocidos o pendientes, monitoreo, pruebas, rollback y fuentes oficiales AWS.
+
+## Verificación
+Usa IaC con plan revisado o comandos de solo lectura y confirma cuenta y región con `aws sts get-caller-identity`. Valida políticas con IAM Access Analyzer antes de aplicarlas.
+
+## Ejemplo
+Aplicación en EC2 que usa claves fijas: sustituirlas por un rol de instancia con permisos mínimos, generar la política con Access Analyzer según actividad de CloudTrail y probarla antes de desplegar.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

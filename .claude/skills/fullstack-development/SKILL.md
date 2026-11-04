@@ -1,9 +1,12 @@
 ---
 name: fullstack-development
-description: "Implementa y mantiene aplicaciones web full stack, desde la interfaz hasta backend, persistencia, autenticación e integración. Úsala al crear funcionalidades, aplicaciones completas o modificar proyectos existentes."
+description: "Implementa funcionalidades web completas que cruzan interfaz, backend y base de datos. Usar siempre que un cambio afecte a varias capas, como botón, endpoint y consulta juntos."
 ---
 
 # Full Stack Development
+
+## Alcance
+**No cubre:** Tareas de una sola capa: usa `frontend-design`, `backend-engineering`, `api-engineering` o `database-engineering`.
 
 ## Objetivo
 Implementar funcionalidades completas, coherentes y mantenibles respetando la arquitectura y convenciones del proyecto existente.
@@ -31,3 +34,12 @@ Implementar funcionalidades completas, coherentes y mantenibles respetando la ar
 
 ## Entrega
 Resume archivos modificados, comportamiento implementado, decisiones, pruebas ejecutadas, resultados, limitaciones y pasos para ejecutar. Distingue pruebas no ejecutadas de pruebas fallidas.
+
+## Verificación
+Ejecuta lint, tipos, pruebas y build disponibles, y recorre el flujo en un entorno local. Registra los comandos y resultados reales.
+
+## Ejemplo
+Exportar facturas a CSV: consulta paginada con permisos, endpoint con pruebas de autorización, botón con estados de carga y error, y documentación actualizada.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

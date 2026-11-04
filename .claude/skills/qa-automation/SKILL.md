@@ -1,9 +1,12 @@
 ---
 name: qa-automation
-description: "Planifica y automatiza pruebas unitarias, integración, API y end-to-end, incluyendo Playwright cuando corresponda. Úsala para validar funcionalidades, prevenir regresiones y preparar entregas."
+description: "Escribe y ejecuta pruebas automatizadas unitarias, de integración, API y end-to-end, incluido Playwright. Usar para automatizar casos, prevenir regresiones o corregir pruebas frágiles."
 ---
 
 # QA Automation
+
+## Alcance
+**No cubre:** Decidir qué probar y en qué nivel: `testing-strategy`. Causa de un fallo de la aplicación: `debugging`.
 
 ## Estrategia
 1. Identifica requisitos, criterios de aceptación, riesgos y flujos críticos.
@@ -26,3 +29,16 @@ description: "Planifica y automatiza pruebas unitarias, integración, API y end-
 
 ## Reporte
 Incluye entorno, versión, casos ejecutados, aprobados, fallidos, omitidos, evidencia y defectos. Nunca afirmes que una prueba pasó si no se ejecutó.
+
+## Verificación
+Ejecuta las pruebas en local y CI. Provoca un fallo deliberado para confirmar que la prueba lo detecta. Repite las inestables varias veces antes de darlas por corregidas.
+
+## Ejemplo
+```ts
+await page.getByRole('button', { name: 'Guardar' }).click();
+await expect(page.getByText('Pedido guardado')).toBeVisible();
+```
+Selectores por rol y aserciones que reintentan, sin pausas fijas.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

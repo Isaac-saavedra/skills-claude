@@ -1,9 +1,12 @@
 ---
 name: api-engineering
-description: "Diseña, implementa, documenta y valida APIs HTTP/REST y sus contratos, incluyendo autenticación, versionado, errores y OpenAPI. Úsala al crear endpoints, integrar servicios o revisar APIs existentes."
+description: "Diseña, implementa y valida APIs HTTP/REST: rutas, contratos, errores, versionado, permisos y límites. Usar al crear endpoints o revisar el diseño de una API."
 ---
 
 # API Engineering
+
+## Alcance
+**No cubre:** Documentar una API existente: `api-documentation`. Integrar con API de terceros: `system-integration`. Identidad y OAuth: `identity-access-management`.
 
 ## Diseño del contrato
 1. Identifica consumidores, casos de uso, recursos y operaciones.
@@ -27,3 +30,12 @@ Cubre respuestas exitosas, entradas inválidas, falta de autenticación, permiso
 
 ## Documentación
 Incluye propósito, autenticación, endpoints, ejemplos realistas claramente identificados, esquemas, errores, límites, versionado y guía de cambios. No inventes ejemplos que contradigan la implementación real.
+
+## Verificación
+Pruebas de contrato con éxito, entrada inválida (`400`/`422`), sin autenticación (`401`), sin permiso (`403`), inexistente (`404`), método no permitido (`405`) y exceso de uso (`429`). Comprueba que los errores no revelen detalles internos.
+
+## Ejemplo
+`POST /pedidos` con `Idempotency-Key`: el reintento devuelve el mismo pedido sin duplicar. Los errores usan `application/problem+json` si el proyecto adopta RFC 9457.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.

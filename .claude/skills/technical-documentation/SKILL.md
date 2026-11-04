@@ -1,9 +1,12 @@
 ---
 name: technical-documentation
-description: "Crea y mantiene documentación técnica profesional, clara y verificable para software, APIs, infraestructura y operaciones. Úsala para README, manuales, especificaciones, ADR, runbooks, informes y documentación de usuario."
+description: "Crea y mantiene documentación técnica general y verificable: README, guías para desarrolladores, informes y wikis. Usar siempre al escribir un README o documentación sin una Skill específica."
 ---
 
 # Technical Documentation
+
+## Alcance
+**No cubre:** Especificaciones: `technical-specification`. OpenAPI: `api-documentation`. Manuales de usuario: `user-manual-creation`. Instalación: `installation-guides`. Runbooks de despliegue: `deployment-documentation`. Arquitectura y ADR: `architecture-documentation`.
 
 ## Objetivo
 Entregar documentación profesional, utilizable y alineada con el sistema real. La documentación es parte del producto, no un añadido opcional.
@@ -115,3 +118,12 @@ Antes de entregar, comprueba:
 
 ## Entregable
 Incluye el documento completo y un breve resumen de archivos creados/actualizados, fuentes consultadas, verificaciones realizadas y pendientes.
+
+## Verificación
+Ejecuta los comandos documentados, comprueba enlaces y rutas, y contrasta cada afirmación con código, configuración o fuentes.
+
+## Ejemplo
+README: propósito, requisitos, instalación probada en un entorno limpio, uso, pruebas y soporte. Los datos no comprobados se marcan `Por confirmar`.
+
+## Fuentes
+Consulta `references/sources.md` cuando la tarea dependa de una versión, norma o comportamiento concreto, y confirma allí el dato antes de afirmarlo.
