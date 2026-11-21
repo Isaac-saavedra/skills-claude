@@ -82,6 +82,8 @@ Las carpetas permanecen planas en `.claude/skills/` porque Claude Code busca `.c
 | `installation-guides` | Escribe guías de instalación y configuración reproducibles, con prerrequisitos, comandos, verificación y resolución de errores. Usar al documentar cómo instalar un sistema, herramienta o entorno. | 3 / 2 |
 | `deployment-documentation` | Documenta procedimientos de despliegue y reversión: runbooks, prechecks, migraciones, comprobaciones y responsables. Usar al escribir un runbook, plan de pase a producción o rollback. | 3 / 2 |
 | `architecture-documentation` | Documenta arquitecturas existentes con diagramas C4 y Mermaid, plantilla arc42 y ADR. Usar al dibujar un sistema, registrar decisiones o actualizar documentación arquitectónica. | 2 / 3 |
+| `diagramming` | Crea diagramas editables y verificados: archivos .drawio de draw.io, Mermaid y BPMN 2.0, técnicos o de negocio, contrastados con el código real. Usar al dibujar arquitectura, flujos, procesos, swimlanes, secuencias o modelos de datos. | 8 / 0 |
+| `professional-writing` | Redacta y corrige correos, mensajes, informes y documentos profesionales en español claro y natural, con el tono adecuado al destinatario. Usar al escribir o mejorar un correo, seguimiento, reclamo, respuesta a cliente, comunicado o documento. | 3 / 2 |
 
 ## 07. Operations & Management
 
