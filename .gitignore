@@ -4,3 +4,6 @@ __pycache__/
 .env.*
 !.env.example
 *.log
+
+# Estado local de oh-my-claudecode
+.omc/
