@@ -11,7 +11,7 @@ Documentación para quien usa el producto. No cubre:
 - Documentación para desarrolladores: `technical-documentation` o `api-documentation`.
 
 ## Procedimiento
-1. Define el lector, sus conocimientos y qué necesita lograr.
+1. Define el lector, sus conocimientos, qué necesita lograr y qué acceso o permisos requiere.
 2. Obtén el comportamiento real: usa el sistema, sus capturas o sus pruebas. Lo que no pudiste comprobar queda marcado.
 3. Ordena por tareas del usuario, no por pantallas o módulos internos.
 4. Separa tipos: tutorial para aprender, guía para resolver un objetivo, referencia para consultar y explicación para comprender.
@@ -21,7 +21,7 @@ Documentación para quien usa el producto. No cubre:
    - Pasos numerados, con una acción por paso, imperativo y lugar antes de la acción.
    - Resultado esperado después de la acción.
 6. Usa los mismos nombres que aparecen en la interfaz.
-7. Añade errores frecuentes: síntoma, causa probable y solución.
+7. Añade errores frecuentes (síntoma, causa probable y solución), preguntas frecuentes y cómo pedir soporte.
 8. Añade glosario solo si es necesario.
 9. Haz que imágenes y tablas sean accesibles, con texto alternativo y sin información solo por color.
 

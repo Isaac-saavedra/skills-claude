@@ -1,15 +1,6 @@
 {
   "skillListingBudgetFraction": 0.09,
-  "skillOverrides": {
-    "engineering:code-review": "off",
-    "engineering:debug": "off",
-    "engineering:testing-strategy": "off",
-    "engineering:tech-debt": "off",
-    "engineering:incident-response": "off",
-    "engineering:architecture": "off",
-    "engineering:system-design": "off",
-    "engineering:documentation": "off",
-    "engineering:deploy-checklist": "off",
-    "design:accessibility-review": "off"
+  "enabledPlugins": {
+    "engineering@synced": false
   }
 }

@@ -1,5 +1,7 @@
 # Reglas para trabajar en este repositorio
 
+Sirven para Claude y para cualquier persona que contribuya. Trabaja en una rama y describe en el pull request el cambio, su motivo, las pruebas y las limitaciones.
+
 Las reglas generales de comportamiento están en `global/CLAUDE.md` (se instala como `~/.claude/CLAUDE.md`). Aquí solo lo propio de este repositorio.
 
 ## Estructura
@@ -11,7 +13,8 @@ Las reglas generales de comportamiento están en `global/CLAUDE.md` (se instala 
 - Frontmatter con `name` igual a la carpeta y `description` que diga qué hace y cuándo usarla ("Usar…"), lo clave al principio porque el listado puede recortarla.
 - Secciones obligatorias: Alcance (con "No cubre" y la Skill que sí lo cubre), Verificación, Ejemplo y Fuentes.
 - `references/sources.md` con al menos una fuente leída de verdad. "Leída" solo si se abrió y se leyó; si no, "Localizada".
-- Nada de datos de proyectos reales, nombres de personas ni secretos: el repositorio es público.
+- Una Skill, una tarea clara. Si se solapa con otra, define el límite en "No cubre"; cada plantilla (ADR, runbook, manual) vive en una sola Skill y las demás remiten a ella.
+- Ejemplos realistas, pero sin datos de proyectos reales, nombres de personas, secretos ni instrucciones para acciones no autorizadas: el repositorio es público.
 - Actualiza `docs/CATALOG.md`, añade un caso en `tests/trigger_cases.json` y registra el cambio en `CHANGELOG.md`.
 
 ## Comprobaciones

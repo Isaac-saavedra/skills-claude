@@ -18,13 +18,15 @@ Plasmar arquitectura y decisiones. No cubre:
    - **Contenedores**: aplicaciones, bases de datos y colas.
    - **Componentes** y **Código**: solo si aportan valor. Para muchos equipos bastan los dos primeros.
    - Suplementarios: paisaje, dinámico y despliegue.
-4. Usa diagramas como código, por ejemplo Mermaid, versionados junto al proyecto. Comprueba que se representen correctamente.
-5. Da a cada diagrama título, leyenda y tipos de relación y protocolo.
+4. Crea y valida los diagramas con `diagramming`: draw.io editable como formato principal y Mermaid para los sencillos, versionados junto al proyecto.
+5. Cada diagrama responde a un nivel de C4; no mezcles niveles.
 6. Usa arc42 si se necesita una estructura completa.
 7. Registra cada decisión relevante en un ADR: contexto, decisión, alternativas y consecuencias.
 8. Indica fecha de revisión y responsable.
 
 ## ADR
+Única plantilla de la biblioteca; las demás Skills remiten aquí.
+- Campos: título, estado (propuesto, aceptado, obsoleto, sustituido), fecha, quién decide, contexto, decisión, opciones comparadas (complejidad, costo, escalabilidad, familiaridad del equipo), consecuencias (qué se facilita, qué se dificulta, qué revisar cuando el sistema crezca) y riesgos.
 - Una decisión por registro y numeración estable (`docs/adr/0007-…md`).
 - No reescribas uno aceptado; crea otro que lo sustituya.
 - Los motivos históricos desconocidos se marcan como "Motivo original desconocido".

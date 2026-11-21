@@ -13,7 +13,7 @@ Documentar el contrato de una API. No cubre:
 ## Procedimiento
 1. Obtén la fuente de verdad: código de rutas, validadores, pruebas o tráfico autorizado. Si hay un OpenAPI, compáralo con el código.
 2. Confirma qué versión de OpenAPI soporta tu herramienta antes de escribir. Publicadas: 3.0.4, 3.1.2 y 3.2.1 en la fecha de revisión.
-3. Documenta para cada operación: método, ruta, parámetros, cuerpo, respuestas, errores y autenticación.
+3. Documenta la URL base por entorno, si se conoce, y para cada operación: método, ruta, parámetros, cuerpo, respuestas, errores y autenticación.
 4. Describe esquemas reutilizables con tipos, obligatorios, formatos y restricciones.
 5. Usa `operationId` estable y descripciones orientadas a la tarea.
 6. Documenta los errores. Si la API usa RFC 9457, describe `type`, `title`, `status`, `detail`, `instance` y `application/problem+json`.

@@ -27,7 +27,7 @@ Entregar documentación profesional, utilizable y alineada con el sistema real. 
 3. Inspecciona repositorio, configuración, contratos, pruebas y documentación previa.
 4. Organiza el contenido de lo general a lo específico.
 5. Incluye pasos numerados, comandos completos, ejemplos, resultados esperados y recuperación.
-6. Añade diagramas Mermaid cuando aclaren arquitectura, secuencias o procesos.
+6. Añade diagramas cuando aclaren arquitectura, secuencias o procesos; créalos con `diagramming`.
 7. Incluye tablas de variables, endpoints, permisos, errores y compatibilidad cuando corresponda.
 8. Revisa consistencia entre documentación y comportamiento implementado.
 9. Actualiza README, changelog y guías afectadas junto con el cambio de software.
@@ -60,24 +60,6 @@ Entregar documentación profesional, utilizable y alineada con el sistema real. 
 - Diagnóstico de errores.
 - Anexos y referencias.
 
-### Manual de usuario
-- Objetivo y audiencia.
-- Requisitos de acceso.
-- Navegación.
-- Procedimientos por tarea.
-- Capturas reales si están disponibles.
-- Mensajes y errores frecuentes.
-- Preguntas frecuentes y soporte.
-
-### API / especificación
-- Propósito, autenticación y autorización.
-- Base URL por entorno si se conoce.
-- Endpoints y métodos.
-- Parámetros y esquemas.
-- Ejemplos coherentes con el contrato.
-- Códigos de respuesta y errores.
-- Paginación, límites y versionado.
-
 ### Runbook operativo
 - Síntoma y alcance.
 - Impacto.
@@ -94,12 +76,8 @@ Entregar documentación profesional, utilizable y alineada con el sistema real. 
 - Tareas frecuentes explicadas paso a paso.
 - A quién acudir para cada tema.
 
-### ADR
-- Título, estado y fecha confirmada.
-- Contexto.
-- Decisión.
-- Alternativas consideradas.
-- Consecuencias y riesgos.
+### Documentos con Skill propia
+Manual de usuario: `user-manual-creation`. Referencia de API: `api-documentation`. ADR y documentación de arquitectura: `architecture-documentation`. Runbook de despliegue y reversión: `deployment-documentation`. Diagramas: `diagramming`.
 
 ## Calidad editorial
 - Español claro y profesional, salvo que se solicite otro idioma.

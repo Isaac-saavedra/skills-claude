@@ -37,7 +37,7 @@ scripts/
   test_triggers.py               # prueba de activación (consume uso)
   instalar.py                    # instalación con respaldo
 tests/trigger_cases.json         # casos de activación
-CLAUDE.md                        # reglas para trabajar en este repositorio
+CLAUDE.md                        # reglas para trabajar y contribuir en este repositorio
 CHANGELOG.md
 ```
 
@@ -103,7 +103,7 @@ Claude Code envía en cada sesión el nombre y la descripción de todas las Skil
 
 Con estas 61 Skills, las oficiales de AWS, los plugins sincronizados y oh-my-claudecode, el listado ronda los 65.000 caracteres; por eso `global/ajustes.json` fija 0,09. Ajusta el valor a lo que tengas instalado y revisa el coste con `/doctor`.
 
-`global/ajustes.json` también desactiva con `skillOverrides` las Skills de los plugins `engineering` y `design` que duplican a las de esta biblioteca. Vuelve a activarlas en `/skills` o quitando la clave.
+`global/ajustes.json` también desactiva el plugin sincronizado `engineering` (`enabledPlugins`), cuyas Skills duplicaban a las de esta biblioteca; se pierde su `standup`, que no tiene equivalente. Para reactivarlo, cambia el valor a `true` o usa `claude plugin enable engineering@synced`. El plugin `design` sigue activo por sus Skills de diseño de producto. `skillOverrides` no sirvió para ocultar Skills sueltas de plugins sincronizados: en Claude Code 2.1.319 siguieron disponibles.
 
 ## Subir Skills a Claude Web
 
