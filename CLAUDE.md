@@ -1,30 +1,21 @@
-# Reglas del proyecto para Claude Code
+# Reglas para trabajar en este repositorio
 
-## Veracidad
-- No inventes hechos, comandos, resultados de pruebas, versiones, archivos ni fuentes.
-- Inspecciona el repositorio antes de editar.
-- Si falta información que cambia la solución, pregunta o marca el supuesto explícitamente.
-- Investiga en documentación oficial cuando la respuesta dependa de versiones, APIs, seguridad o servicios actuales.
-- Distingue hechos comprobados, hipótesis y recomendaciones.
+Las reglas generales de comportamiento están en `global/CLAUDE.md` (se instala como `~/.claude/CLAUDE.md`). Aquí solo lo propio de este repositorio.
 
-## Cambios
-- Conserva las convenciones y arquitectura existentes.
-- Realiza cambios pequeños y revisables.
-- No sobrescribas cambios del usuario.
-- No ejecutes acciones destructivas, migraciones productivas, despliegues, force push o eliminación de datos sin autorización explícita.
-- No introduzcas secretos en el repositorio.
+## Estructura
+- Skills planas en `.claude/skills/<skill>/`: Claude Code no detecta subcarpetas por especialidad. La organización por especialidad vive en `docs/CATALOG.md`.
+- `global/` contiene lo que se instala en `~/.claude`: `CLAUDE.md` y `ajustes.json`.
+- `docs/instrucciones-maestras.md` guarda el texto original de las instrucciones y dónde quedó cada sección. Si cambias `global/CLAUDE.md` o una Skill que recibió una sección, actualiza esa tabla.
 
-## Calidad
-- Añade o actualiza pruebas para los cambios.
-- Ejecuta las comprobaciones disponibles y reporta los comandos y resultados reales.
-- No afirmes que algo funciona si no se ha validado.
-- Considera seguridad, accesibilidad, rendimiento y mantenibilidad.
+## Al crear o modificar una Skill
+- Frontmatter con `name` igual a la carpeta y `description` que diga qué hace y cuándo usarla ("Usar…"), lo clave al principio porque el listado puede recortarla.
+- Secciones obligatorias: Alcance (con "No cubre" y la Skill que sí lo cubre), Verificación, Ejemplo y Fuentes.
+- `references/sources.md` con al menos una fuente leída de verdad. "Leída" solo si se abrió y se leyó; si no, "Localizada".
+- Nada de datos de proyectos reales, nombres de personas ni secretos: el repositorio es público.
+- Actualiza `docs/CATALOG.md`, añade un caso en `tests/trigger_cases.json` y registra el cambio en `CHANGELOG.md`.
 
-## Documentación obligatoria
-- Actualiza README, documentación técnica, ejemplos de configuración y changelog cuando el cambio lo requiera.
-- Documenta prerrequisitos, instalación, configuración, uso, pruebas, despliegue, recuperación y limitaciones.
-- No inventes endpoints, variables, resultados, capturas, responsables o fechas.
-- Marca la información pendiente como “Por confirmar”.
-
-## Entrega
-Resume qué cambió, por qué, archivos afectados, pruebas realizadas, resultados, riesgos, limitaciones y próximos pasos.
+## Comprobaciones
+- `python3 scripts/validate_skills.py` debe terminar sin errores antes de cada commit.
+- `claude plugin validate .claude/skills` cuando cambie la estructura.
+- `python3 scripts/test_triggers.py` consume uso de la cuenta: córrelo solo cuando haga falta medir la activación, y reporta el resultado real.
+- Instala con `python3 scripts/instalar.py` (simulación) y `--aplicar`; nunca copies a mano sobre `~/.claude/skills`.
