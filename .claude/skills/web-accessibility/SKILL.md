@@ -13,12 +13,12 @@ Accesibilidad de contenido e interfaces web. No cubre:
 ## Procedimiento
 1. Confirma el nivel objetivo (normalmente AA) y qué páginas o flujos entran en la revisión.
 2. Ejecuta una herramienta automática como primer filtro. Detecta solo parte de los problemas: no concluyas "accesible" con su resultado.
-3. Prueba manualmente con teclado: orden lógico, foco visible (2.4.7, AA) y sin trampas.
+3. Prueba manualmente con teclado: orden lógico, foco visible (2.4.7, AA) y sin trampas, también en modales.
 4. Revisa estructura: títulos en orden, puntos de referencia, HTML semántico y `lang`.
 5. Comprueba contraste: 4,5:1 para texto normal y 3:1 para texto grande (AA).
 6. Revisa formularios: etiquetas asociadas e identificación de errores en texto (3.3.1, nivel A).
 7. Comprueba tamaños de objetivo: 24 × 24 px CSS como mínimo AA, con excepciones.
-8. Comprueba arrastres: debe existir alternativa sin arrastrar.
+8. Comprueba arrastres: debe existir alternativa sin arrastrar. Comprueba también zoom al 200 % y reflujo sin pérdida de contenido (1.4.4 y 1.4.10, AA) y control del audio que se reproduce solo (1.4.2, A).
 9. Comprueba con un lector de pantalla los flujos clave e indica cuál y versión.
 10. Usa ARIA solo si el HTML nativo no basta; sigue los patrones de la guía APG.
 

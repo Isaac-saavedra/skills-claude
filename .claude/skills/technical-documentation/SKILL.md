@@ -8,6 +8,8 @@ description: "Crea y mantiene documentación técnica general y verificable: REA
 ## Alcance
 **No cubre:** Especificaciones: `technical-specification`. OpenAPI: `api-documentation`. Manuales de usuario: `user-manual-creation`. Instalación: `installation-guides`. Runbooks de despliegue: `deployment-documentation`. Arquitectura y ADR: `architecture-documentation`.
 
+Para decidir qué documentación necesita un proyecto según cada público (gerencia, negocio, usuarios, desarrollo, QA y operación), sigue `references/documentacion-por-publico.md`.
+
 ## Objetivo
 Entregar documentación profesional, utilizable y alineada con el sistema real. La documentación es parte del producto, no un añadido opcional.
 
@@ -85,6 +87,12 @@ Entregar documentación profesional, utilizable y alineada con el sistema real. 
 - Validación posterior.
 - Escalamiento y rollback.
 - Riesgos y permisos requeridos.
+
+### Guía de incorporación
+- Preparación del entorno.
+- Sistemas clave y cómo se conectan.
+- Tareas frecuentes explicadas paso a paso.
+- A quién acudir para cada tema.
 
 ### ADR
 - Título, estado y fecha confirmada.

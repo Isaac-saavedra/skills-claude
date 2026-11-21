@@ -8,6 +8,8 @@ description: "Diseña, implementa y revisa soluciones AWS con foco en arquitectu
 ## Alcance
 **No cubre:** Código Terraform: `terraform-iac`. Kubernetes: `kubernetes-engineering`. Otros proveedores de nube.
 
+Cubre el diseño transversal: arquitectura, seguridad, costos y operación entre servicios. Si están instaladas las Skills oficiales de AWS por servicio (por ejemplo `aws-iam`, `aws-serverless` o `aws-database`), úsalas para el detalle de cada servicio.
+
 ## Reglas de verificación
 AWS cambia con frecuencia. Verifica nombres, límites, regiones, precios, disponibilidad y comportamiento en documentación oficial AWS antes de afirmarlos. No inventes ARN, cuotas ni capacidades.
 

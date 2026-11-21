@@ -10,6 +10,9 @@ Sistema caído o comprometido y su análisis posterior. No cubre:
 - Causa raíz de un error sin impacto activo: `debugging`.
 - Rotación rutinaria: `secrets-management`.
 
+## Severidad y estados
+Usa la escala de la organización si existe. Si no, una orientativa: SEV1 servicio caído para todos; SEV2 función importante degradada para muchos; SEV3 problema menor para algunos; SEV4 impacto cosmético o bajo. Estados de avance: investigando, identificado, monitoreando, resuelto.
+
 ## Durante el incidente
 1. Declara el incidente, la severidad y el canal único.
 2. Asigna roles: comandante (coordina), comunicaciones (informa) y operaciones (mitiga). Una persona puede cubrir varios al principio.

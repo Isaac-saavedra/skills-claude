@@ -16,8 +16,8 @@ Decide qué deuda pagar, cuándo y por qué. No cubre:
 2. Cruza con frecuencia de cambio. Lista archivos más modificados:
    `git log --since="12 months ago" --name-only --pretty=format: | grep -v '^$' | sort | uniq -c | sort -rn | head -30`
 3. Describe cada elemento en dos partes: principal (coste de corregirlo) e interés (coste extra por cada cambio).
-4. Clasifícalo por origen: deliberada o inadvertida, prudente o imprudente.
-5. Puntúa con: interés, frecuencia de cambio, riesgo y esfuerzo. Usa escalas relativas y marca las estimaciones como tales.
+4. Clasifícalo por tipo (código, arquitectura, pruebas, dependencias, documentación, infraestructura) y por origen (deliberada o inadvertida, prudente o imprudente).
+5. Puntúa con: interés, frecuencia de cambio, riesgo y esfuerzo. Usa escalas relativas y marca las estimaciones como tales. Fórmula orientativa, no estándar: prioridad = (impacto + riesgo) × (6 − esfuerzo), con cada factor de 1 a 5.
 6. Decide: pagar ahora, pagar al tocar la zona, aceptar con fecha de revisión o eliminar la funcionalidad.
 7. Crea tareas con resultado medible y dueño.
 8. Mide el efecto con las métricas DORA disponibles u otros indicadores del proyecto.

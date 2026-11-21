@@ -13,14 +13,14 @@ Diseñar soluciones comprensibles, seguras, mantenibles y proporcionales a los r
 
 ## Procedimiento
 1. Resume el problema, usuarios, objetivos y restricciones conocidas.
-2. Separa requisitos funcionales de no funcionales: disponibilidad, latencia, seguridad, privacidad, costo, volumen, recuperación y mantenibilidad.
+2. Separa requisitos funcionales de no funcionales: disponibilidad, latencia, seguridad, privacidad, costo, volumen, recuperación y mantenibilidad. Estima la carga con datos o rangos explícitos.
 3. Identifica incógnitas que cambien la arquitectura. Pregunta antes de asumirlas.
 4. Inspecciona el repositorio y la infraestructura existentes antes de proponer reemplazos.
 5. Presenta al menos una opción simple y, si aporta valor, alternativas. Compara complejidad, costo, riesgos y operación.
 6. Define componentes, responsabilidades, límites, flujos de datos, dependencias y puntos de falla.
 7. Considera autenticación, autorización, secretos, cifrado, auditoría, copias de seguridad y recuperación.
 8. Produce diagramas Mermaid válidos cuando ayuden: contexto, contenedores, secuencia o despliegue.
-9. Registra decisiones importantes como ADR: contexto, decisión, alternativas, consecuencias y estado.
+9. Registra decisiones importantes como ADR: estado, fecha, quién decide, contexto, decisión, opciones comparadas por complejidad, costo, escalabilidad y familiaridad del equipo, y consecuencias (qué se facilita, qué se dificulta y qué habrá que revisar cuando el sistema crezca).
 10. Define cómo validar la arquitectura mediante pruebas, métricas y criterios de aceptación.
 
 ## Reglas

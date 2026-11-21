@@ -10,6 +10,8 @@ Planificación de trabajo de software. No cubre:
 - Definir requisitos: `requirements-engineering`.
 - Diseño técnico: `technical-specification`.
 
+Si antes de planificar hay que evaluar el proyecto completo (qué existe, qué falta, qué es prioritario y qué no aplica), sigue `references/evaluacion-integral.md`.
+
 ## Procedimiento
 1. Aclara objetivo, resultado medible, fecha o restricción fija, equipo disponible y metodología.
 2. Delimita qué entra y qué no.

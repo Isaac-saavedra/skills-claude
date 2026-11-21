@@ -24,7 +24,14 @@ Decisiones de estrategia. No cubre:
 7. Define política de inestabilidad: aislar, asignar dueño y corregir con fecha.
 8. Enlaza cada requisito o riesgo crítico con su prueba.
 
+## Según el tipo de componente
+- **API**: lógica de negocio en unitarias, capa HTTP en integración y contratos con los consumidores.
+- **Pipelines de datos**: validación de entrada, corrección de transformaciones e idempotencia ante reintentos.
+- **Frontend**: componentes, interacción, regresión visual y accesibilidad.
+- **Infraestructura**: pruebas de humo, carga y, si el riesgo lo justifica, inyección de fallos.
+
 ## Reglas
+- No gastes pruebas en lo trivial (getters, código del framework, scripts de un solo uso); concéntralas en rutas críticas, errores, casos límite, límites de seguridad e integridad de datos.
 - La forma de pirámide no es un fin. Lo que importa es que las pruebas sean expresivas, rápidas, fiables y fallen solo por motivos útiles.
 - La cobertura indica lo no ejecutado; no demuestra calidad. No la fijes como único objetivo.
 - Evita duplicar el mismo caso en varios niveles sin motivo.

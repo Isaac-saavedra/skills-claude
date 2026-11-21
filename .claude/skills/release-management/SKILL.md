@@ -22,6 +22,12 @@ Cómo se versiona y publica. No cubre:
 8. Comunica cambios incompatibles con guía de migración y plazos de retirada.
 9. Observa tras publicar. Corrige hacia delante o revierte según lo acordado.
 
+## Lista de despliegue
+- **Antes**: CI en verde, revisión aprobada, sin defectos críticos conocidos, migraciones probadas, flags configurados, plan de reversión escrito y guardia avisada.
+- **Durante**: staging verificado, pruebas de humo, producción gradual (canary) si existe, errores y latencia vigilados un tiempo acordado, flujos clave comprobados.
+- **Después**: métricas normales, changelog y notas actualizados, interesados avisados, tareas cerradas.
+- **Disparadores de reversión** definidos antes de empezar, con umbrales concretos de error, latencia o flujos críticos.
+
 ## Reglas
 - Etiquetar, publicar o enviar a producción requiere autorización explícita.
 - No muevas ni borres etiquetas publicadas sin autorización.

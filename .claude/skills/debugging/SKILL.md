@@ -14,7 +14,7 @@ No adivines la causa. Construye y verifica hipótesis con evidencia.
 ## Flujo
 1. Recopila mensaje exacto, stack trace, logs, entorno, versión, hora, frecuencia y cambios recientes.
 2. Separa hechos observados de hipótesis.
-3. Determina alcance: usuario, módulo, entorno, instancia o sistema completo.
+3. Determina alcance: usuario, módulo, entorno, instancia o sistema completo. Compara dónde funciona y dónde falla: entorno, datos, versión y configuración.
 4. Intenta reproducir sin alterar datos productivos.
 5. Formula hipótesis ordenadas por evidencia y costo de comprobación.
 6. Ejecuta una prueba por vez y registra resultado.

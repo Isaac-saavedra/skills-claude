@@ -41,7 +41,7 @@ No uses nombres reservados ni XML en los metadatos.
 Incluye carpeta, SKILL.md, referencias/plantillas necesarias, ejemplos de activación y resultado de validación. No afirmes compatibilidad universal sin probar los entornos objetivo.
 
 ## Verificación
-Ejecuta `python3 scripts/validate_skills.py` y, en Claude Code 2.1.233 o posterior, `claude plugin validate .claude/skills`. Prueba la activación con `python3 scripts/test_triggers.py`.
+Dentro del repositorio `skills-claude`, ejecuta `python3 scripts/validate_skills.py` y prueba la activación con `python3 scripts/test_triggers.py`. En cualquier proyecto, `claude plugin validate .claude/skills` (Claude Code 2.1.233 o posterior) comprueba la estructura.
 
 ## Ejemplo
 Descripción: "Audita dependencias con npm audit y pip-audit. Usar con paquetes vulnerables u obsoletos". Tercera persona, qué hace y cuándo usarla, con lo clave al principio porque el listado puede recortarla.
